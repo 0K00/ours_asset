@@ -1,0 +1,67 @@
+/* Class syntax
+
+Skeleton seperator ''
+Skin seperator '_'
+Personality seperator '__'
+Custom/Modifier seperator '--'
+
+Button's skeleton (basicment the essential and generic statements without color and size statements for example)
+  New class
+    .{foundation|component}
+  New custom class based on an existing class
+    .{foundation|component}--{modifier}
+
+  Example
+    .btn--{key} {
+      ... your statements
+      
+      &:disabled {
+        cursor: inherit;
+      }
+    }
+
+Button's skin (Fonts, Paddings and Sizes statements)
+  New class
+    .{foundation|component}_{thn|lght|sm|md|...}
+  New custom class based on an existing class
+    .{foundation|component}_{skin_key}--{modifier}
+
+  Example
+    .btn_{key} {
+      ... your statements
+    }
+
+Button's personality (Colors, Hover, Focus, Active and Disabled statements)
+  New class
+    .{foundation|component}__{prm|scnd|...}
+  New custom class based on an existing class
+    .{foundation|component}__{personality_key}--{modifier}
+
+  Example
+  .btn__{key} {
+    ... your statements
+  }
+
+/***/
+
+// Sass
+@use "sass:map";
+
+// Base
+@import './function';
+@import './config';
+@import './reset';
+
+// Foundation
+@import './Foundation/Colors/color';
+@import './Foundation/Fonts/font';
+@import './Foundation/Icons/icon';
+@import './Foundation/Frames/spacing';
+@import './Foundation/Frames/breakpoint';
+@import './Foundation/Frames/grid';
+@import './Foundation/Textures/shadow';
+@import './Foundation/Textures/border';
+@import './Foundation/Textures/radius';
+
+// Component
+@import './Component/button';

@@ -1,0 +1,97 @@
+.c {
+  display: flex;
+}
+.c_wrap {
+  flex-wrap: wrap;
+}
+.c_nowrap {
+  flex-wrap: nowrap;
+}
+.c_wrap--reverse {
+  flex-wrap: wrap-reverse;
+}
+.align--ctr {
+  align-items: center;
+}
+
+.c_row--stretch {
+  flex-direction: row;
+  padding: 0 get($spacing, '8');
+  gap: get($spacing, '8');
+
+  @include bp('sm') {
+    padding: 0 get($spacing, '4');
+    gap: get($spacing, '4');
+  }
+
+  @include bp('md') {
+    padding: 0 get($spacing, '4');
+  }
+
+  .block {
+    flex-grow: 1;
+  }
+
+  .block--end {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: get($spacing, '8');
+  }
+
+  @each $key, $value in $grid {
+    .block--#{$key} {
+      flex-grow: $value;
+    }
+  }
+
+  @each $key, $value in $grid {
+    .block_end--#{$key} {
+      flex-grow: $value;
+      display: flex;
+      justify-content: flex-end;
+      gap: get($spacing, '8');
+    }
+  }
+}
+
+.c_center {
+  justify-content: center;
+
+  @each $key, $value in $grid {
+    .row--#{$key} {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      max-width: $value;
+      width: 100%;
+      gap: get($spacing, '8');
+
+      @include bp('sm') {
+        gap: get($spacing, '4');
+      }
+    
+      .block {
+        flex-grow: 1;
+      }
+    
+      @each $key, $value in $grid {
+        .block--#{$key} {
+          flex-grow: $value;
+        }
+      }
+
+      .block_center {
+        flex-grow: 1;
+        justify-self: center;
+      }
+    
+      @each $key, $value in $grid {
+        .block_center--#{$key} {
+          flex-grow: $value;
+          justify-self: center;
+        }
+      }
+    }
+  }
+}

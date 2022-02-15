@@ -1,0 +1,53 @@
+// Background
+  html, .bg_1 {
+    background-color: $td__bg--1;
+  }
+  .bg_2 {
+    background-color: $td__bg--2;
+  }
+
+// Component
+  // Background
+  .comp_bg--normal {
+    background-color: $td__comp-bg--normal;
+  }
+  .comp_bg--hover {
+    background-color: $td__comp-bg--hover;
+  }
+  .comp_bg--selected {
+    background-color: $td__comp-bg--selected;
+  }
+  // Border
+  .comp_br--normal {
+    border-color: $td__comp-br--normal;
+  }
+  .comp_br--focus {
+    border-color: $td__comp-br--focus;
+  }
+  .comp_br--hover {
+    border-color: $td__comp-br--hover;
+  }
+  // Solid
+  .comp_sl--normal {
+    background-color: $td__comp-sl--normal;
+  }
+  .comp_sl--hover {
+    background-color: $td__comp-sl--hover;
+  }
+  
+// Text
+  // Colored
+  .t_cl--low {
+    color: $td__text-cl--low
+  }
+  .t_cl--high {
+    color: $td__text-cl--high
+  }
+  // Gray
+  .t_gr--low {
+    color: $td__text-gr--low
+  }
+  .t_gr--high {
+    color: $td__text-gr--high
+  }
+

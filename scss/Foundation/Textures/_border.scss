@@ -1,0 +1,39 @@
+.focus {
+  &:active, &:focus {
+    box-shadow: 0px 0px 0px 4px $td__comp-br--focus;
+  }
+}
+
+@each $key, 
+$value in $border {
+  // Padding
+    .br--#{$key} {
+      border: 1px solid $value;
+    }
+
+    .br_x--#{$key} {
+      border-left: 1px solid $value;
+      border-right: 1px solid $value;
+    }
+
+    .br_y--#{$key} {
+      border-top: 1px solid $value;
+      border-bottom: 1px solid $value;
+    }
+
+    .br_t--#{$key} {
+      border-top: 1px solid $value;
+    }
+
+    .br_b--#{$key} {
+      border-bottom: 1px solid $value;
+    }
+
+    .br_r--#{$key} {
+      border-right: 1px solid $value;
+    }
+
+    .br_l--#{$key} {
+      border-left: 1px solid $value;
+    }
+}

@@ -1,0 +1,34 @@
+h1, .h1 {
+  @include font__h--1;
+}
+h2, .h2 {
+  @include font__h--2;
+}
+h3, .h3 {
+  @include font__h--3;
+}
+h4, .h4 {
+  @include font__h--4;
+}
+h5, .h5 {
+  @include font__h--5;
+}
+h6, .h6 {
+  @include font__h--6;
+}
+html, p, .text {
+  @include font__i--1;
+}
+strong, .t_bold {
+  @include font__i--2;
+}
+small, .t_sm {
+  @include font__i--3;
+
+  strong, .t_sm--bold {
+    @include font__i--4
+  }
+}
+.t_sm--bold {
+  @include font__i--4
+}

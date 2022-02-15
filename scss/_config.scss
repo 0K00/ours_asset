@@ -1,0 +1,226 @@
+// Spacings variables
+  $spacing: (
+    // thin
+    "0": 0,
+    // extralight
+    "1": 0.25rem,
+    // light
+    "2": 0.5rem,
+    // normal
+    "4": 1rem,
+    // medium
+    "8": 2rem,
+    // bold
+    "16": 4rem,
+    // extrabold
+    "32": 8rem,
+    // black
+    "64": 16rem,
+    // auto
+    "auto": auto,
+  ) !default;
+
+// Radius variables
+$radius: (
+  "none": 0px,
+  "thin": 0.125rem,
+  "light": 0.25rem,
+  "reg": 0.5rem,
+  "md": 1rem,
+  "bold": 2rem,
+  "black": 4rem,
+  "full": 50%,
+) !default;
+
+// Border variables
+$border: (
+  "normal": #392C72,
+  "focus": #5842C3,
+  "hover": #443592,
+) !default;
+
+// Grids variables
+$grid: (
+  // flex-grow
+  "0": 0,
+  "1": 1,
+  "2": 2,
+  "3": 3,
+  "4": 4,
+  "5": 5,
+  "6": 6,
+  "7": 7,
+  "8": 8,
+  "9": 9,
+  "10": 10,
+  "11": 11,
+  "12": 12,
+  // max-width
+  "160": 160px,
+  "256": 256px,
+  "352": 352px,
+  "448": 448px,
+  "544": 544px,
+  "640": 640px,
+  "736": 736px,
+  "1120": 1120px,
+  "1312": 1312px,
+) !default;
+
+// Breakpoints variables
+  $breakpoints: (
+    // small (tablet)
+    "sm": (max-width: 640px),
+    // medium
+    "md": (max-width: 768px),
+    // large (laptop)
+    "lg": (max-width: 1024px),
+    // Extralarge (desktop)
+    "xl": (max-width: 1280px),
+    // Double Extralarge
+    "2xl": (max-width: 1536px),
+  ) !default;
+
+
+// Colors variables
+  $c__white: #FFFFFF;
+  $c__black: #000000;
+  $c__negative: #E5484D;
+// Light theme
+  // Background
+    $tl__bg--1: #FDFCFE;
+    $tl__bg--2: #FBFAFF;
+  // Component
+    // Background
+      $tl__comp-bg--normal: #F5F2FF;
+      $tl__comp-bg--hover: #EDE9FE;
+      $tl__comp-bg--selected: #E4DEFC;
+    // Border
+      $tl__comp-br--normal: #D7CFF9;
+      $tl__comp-br--focus: #C4B8F3;
+      $tl__comp-br--hover: #AA99EC;
+    // Solid
+      $tl__comp-sl--normal: #6E56CF;
+      $tl__comp-sl--hover: #644FC1;
+  // Text
+    // Colored
+      $tl__text-cl--low: #5746AF;
+      $tl__text-cl--high: #20134B;
+    // Gray
+      $tl__text-gr--low: #6F6E77;
+      $tl__text-gr--high: #1A1523;
+// Dark theme
+  // Background
+  $td__bg--1: #17151F;
+  $td__bg--2: #1C172B;
+  // Component
+    // Background
+      $td__comp-bg--normal: #251E40;
+      $td__comp-bg--hover: #2C2250;
+      $td__comp-bg--selected: #32275F;
+    // Border
+      $td__comp-br--normal: #392C72;
+      $td__comp-br--focus: #5842C3;
+      $td__comp-br--hover: #443592;
+    // Solid
+      $td__comp-sl--normal: #6E56CF;
+      $td__comp-sl--hover: #7C66DC;
+  // Text
+    // Colored
+      $td__text-cl--low: #9E8CFC;
+      $td__text-cl--high: #F1EEFE;
+    // Gray
+      $td__text-gr--low: #A09FA6;
+      $td__text-gr--high: #EDEDEF;
+
+
+// Font
+  // Heading
+    @mixin font__h--1 {
+      @include font-face(GeneralSans-Medium, GeneralSans-Medium, 500, swap, normal);
+      font-family: 'GeneralSans-Medium', Arial, Helvetica, sans-serif;
+      font-size: 64px;
+      line-height: 72px;
+      font-weight: 500;
+    }
+    @mixin font__h--2 {
+      @include font-face(GeneralSans-Semibold, GeneralSans-Semibold, 600, swap, normal);
+      font-family: 'GeneralSans-Semibold', Arial, Helvetica, sans-serif;
+      font-size: 48px;
+      line-height: 56px;
+      font-weight: 600;
+    }
+    @mixin font__h--3 {
+      @include font-face(GeneralSans-Semibold, GeneralSans-Semibold, 600, swap, normal);
+      font-family: 'GeneralSans-Semibold', Arial, Helvetica, sans-serif;
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 600;
+    }
+    @mixin font__h--4 {
+      @include font-face(GeneralSans-Medium, GeneralSans-Medium, 500, swap, normal);
+      font-family: 'GeneralSans-Medium', Arial, Helvetica, sans-serif;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 500;
+    }
+    @mixin font__h--5 {
+      @include font-face(GeneralSans-Medium, GeneralSans-Medium, 500, swap, normal);
+      font-family: 'GeneralSans-Medium', Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      line-height: 32px;
+      font-weight: 500;
+    }
+    @mixin font__h--6 {
+      @include font-face(GeneralSans-Semibold, GeneralSans-Semibold, 600, swap, normal);
+      font-family: 'GeneralSans-Semibold', Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+    }
+  // Inteface
+    @mixin font__i--1 {
+      @include font-face(GeneralSans-Medium, GeneralSans-Medium, 500, swap, normal);
+      font-family: 'GeneralSans-Medium', Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+    }
+    @mixin font__i--2 {
+      @include font-face(GeneralSans-Semibold, GeneralSans-Semibold, 600, swap, normal);
+      font-family: 'GeneralSans-Semibold', Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+    }
+    @mixin font__i--3 {
+      @include font-face(GeneralSans-Regular, GeneralSans-Regular, 400, swap, normal);
+      font-family: 'GeneralSans-Regular', Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+    @mixin font__i--4 {
+      @include font-face(GeneralSans-Bold, GeneralSans-Bold, 700, swap, normal);
+      font-family: 'GeneralSans-Bold', Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 700;
+    }
+  // Caps
+    @mixin font__c--1 {
+      @include font-face(GeneralSans-Bold, GeneralSans-Bold, 700, swap, normal);
+      font-family: 'GeneralSans-Bold', Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 700;
+    }
+    @mixin font__c--2 {
+      @include font-face(GeneralSans-Bold, GeneralSans-Bold, 700, swap, normal);
+      font-family: 'GeneralSans-Bold', Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 700;
+    }

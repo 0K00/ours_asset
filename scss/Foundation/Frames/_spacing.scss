@@ -1,0 +1,72 @@
+/* 
+*  All classes are named using the format {estates}{sides}-{size}.
+*  - Control the horizontal margin of an element using the `mx-{size}` utilities.
+*  - Control the vertical margin of an element using the `my-{size}` utilities.
+*  - Control the margin on one side of an element using the `m{t|r|b|l}-{size}` utilities.
+*/
+
+@each $key,
+$value in $spacing {
+
+  // Padding
+  .p-#{$key} {
+    padding: $value;
+  }
+
+  .px-#{$key} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  .py-#{$key} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  .pt-#{$key} {
+    padding-top: $value;
+  }
+
+  .pb-#{$key} {
+    padding-bottom: $value;
+  }
+
+  .pr-#{$key} {
+    padding-right: $value;
+  }
+
+  .pl-#{$key} {
+    padding-left: $value;
+  }
+
+  // Margin
+  .m-#{$key} {
+    margin: $value;
+  }
+
+  .mt-#{$key} {
+    margin-top: $value;
+  }
+
+  .mr-#{$key} {
+    margin-right: $value;
+  }
+
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$key} {
+    margin-left: $value;
+  }
+
+  .mx-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .my-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+}

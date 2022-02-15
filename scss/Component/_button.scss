@@ -1,0 +1,94 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: get($spacing, '2');
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0;
+  border-radius: get($radius, 'light');
+  transition: all 150ms ease-in-out;
+  &:disabled {
+    cursor: inherit;
+  }
+}
+
+.btn_md {
+  @include font__i--2;
+  padding: get($spacing, '2') get($spacing, '4');
+}
+.btn_sm {
+  @include font__i--4;
+  padding: get($spacing, '1') get($spacing, '2');
+}
+
+.btn__prm {
+  background-color: $td__comp-sl--normal;
+  color: $td__text-gr--high;
+
+  &:hover {
+    background-color: $td__comp-sl--hover;
+  }
+  &:focus, &:active {
+    background-color: $td__comp-sl--hover;
+    box-shadow: 0px 0px 0px 4px $td__comp-br--focus;
+    transform: scale(1.04);
+  }
+  &:disabled {
+    background-color: $td__bg--2;
+    color: $tl__text-gr--low;
+  }
+}
+.btn__scnd {
+  background-color: transparent;
+  color: $td__text-cl--low;
+  border: 2px solid $td__comp-br--normal;
+
+  &:hover {
+    border: 2px solid $td__comp-br--hover;
+    color: $td__text-gr--high;
+  }
+  &:focus, &:active {
+    border: 2px solid transparent;
+    color: $td__text-gr--high;
+    box-shadow: 0px 0px 0px 4px $td__comp-br--focus;
+    transform: scale(1.04);
+  }
+  &:disabled {
+    border: 2px solid $td__bg--2;
+    color: $tl__text-gr--low;
+  }
+}
+.btn__trt {
+  background-color: transparent;
+  color: $td__text-cl--low;
+
+  &:hover {
+    background-color: $td__comp-bg--hover;
+  }
+  &:focus, &:active {
+    background-color: $td__comp-bg--hover;
+    box-shadow: 0px 0px 0px 4px $td__comp-br--focus;
+    transform: scale(1.04);
+  }
+  &:disabled {
+    background-color: transparent;
+    color: $tl__text-gr--low;
+  }
+}
+.btn__qrt {
+  background-color: $td__comp-bg--normal;
+  color: $td__text-cl--low;
+
+  &:hover {
+    background-color: $td__comp-bg--hover;
+  }
+  &:focus, &:active {
+    background-color: $td__comp-bg--selected;
+    transform: scale(1.04);
+  }
+  &:disabled {
+    background-color: $td__bg--2;
+    color: $tl__text-gr--low;
+  }
+}
